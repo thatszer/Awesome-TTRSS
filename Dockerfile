@@ -72,7 +72,11 @@ RUN apk add --update --virtual build-dependencies tar \
   \
   && tar xzvpf /var/www/plugins/remove_iframe_sandbox/master.tar.gz --strip-components=1 -C /var/www/plugins/remove_iframe_sandbox ttrss-plugin-remove-iframe-sandbox-master && rm /var/www/plugins/remove_iframe_sandbox/master.tar.gz \
   \
-  && tar xzvpf /var/www/themes/feedly/master.tar.gz --strip-components=1 -C /var/www/themes/ tt-rss-feedly-theme-master/feedly tt-rss-feedly-theme-master/feedly.css && rm -rf /var/www/themes/feedly \
+  && tar xzvpf /var/www/themes/feedly/master.tar.gz --strip-components=1 -C /var/www/themes/ \
+  tt-rss-feedly-theme-master/feedly \
+  tt-rss-feedly-theme-master/feedly.css \
+  tt-rss-feedly-theme-master/feedly-cozy.css tt-rss-feedly-theme-master/feedly-cozy_night.css tt-rss-feedly-theme-master/feedly-cozy_auto.css \
+  && rm -rf /var/www/themes/feedly \
   \
   && tar xzvpf /var/www/themes/rsshub/master.tar.gz --strip-components=2 -C /var/www/themes/ ttrss-theme-rsshub-master/dist/rsshub.css && rm -rf /var/www/themes/rsshub \
   \
